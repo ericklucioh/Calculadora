@@ -1,0 +1,199 @@
+:root,
+:root.dark {
+    --background:#000D21;
+    --color:white;
+    --btnlight:#0091C3;
+    --btndark:#003661;
+    --fade1:#191B1E;
+    --fade2:#090D14;
+    --primary:#000d214d;
+    --secundary:#08293C;
+    --tertiary:#011725;
+    --footer1:#032f48 ;
+    --footer2:#071f2d ;
+    --light:none;
+    --dark:block;
+}
+:root.light {
+    --background:white;
+    --color:#373737;
+    --btnlight:#8CC1DE;
+    --btndark:#D8EEFF;
+    --fade1:#eeebeb;
+    --fade2:#E5E5E5;
+    --primary:#ffffff33;
+    --secundary:#366680;
+    --tertiary:#0b82aa2b;
+    --footer1:#9EE8FF  ;
+    --footer2:#0091C3  ;
+    --light:block;
+    --dark:none;
+}
+* {
+    color: var(--color);
+    font-family: 'Fira Code', monospace;
+    border: 0px;
+}
+body {
+    background: var(--background);
+}
+
+.buttons * {
+    background: none;
+    border-radius: 100%;
+    color: var(--color);
+    width: 70px;
+    height: 70px;
+}
+.sizeCount {
+    height: 35px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: right;
+    color: rgba(251, 251, 251, 0.5); 
+}
+#result { display: none;}
+.signal {
+    position: absolute;
+    width: 340px;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+}
+.sizeResult {
+    height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    color: var(--color);
+}
+.checkbox {
+    position: absolute;
+    display: none;
+}
+.checkbox:checked ~ .btnTheme {
+    transition: 150ms;
+    margin-left: -2px;
+}
+.sizeNumbers * {
+    color: var(--color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+}
+.container {
+    height: 98vh;
+    display: grid;
+    place-items: center;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 423px;
+    height: 858px;
+    background: linear-gradient(166.34deg, var(--fade1) 0%, var(--fade2) 22.9%, var(--fade2) 100%);    border-radius: 40px;
+}
+.top {
+    display: flex;
+    padding-top: 52px;
+    padding-left: 151px;
+}
+#sun {
+    margin: 7px 0px 0px 17px;
+    display: var(--dark);
+}
+#moon {
+    margin: 7px 0px 0px 30px;
+    display: var(--dark);
+}
+#sunl {
+    margin: 7px 0px 0px 17px;
+    display: var(--light);
+}
+#moonl {
+    margin: 7px 0px 0px 30px;
+    display: var(--light);
+}
+#clock {display: var(--dark)}
+#clockl {display: var(--light)}
+.theme img {
+    z-index: 2;
+    margin: 10px;
+    width: 29.74px;
+    height: 29.74px;
+    pointer-events: none;
+}
+.theme label {position: absolute;}
+.theme {
+    display: flex;
+    width: 122px;
+    height: 44px;
+    border-radius: 40px;
+    background-color: var(--btnlight);
+}
+.btnTheme  {
+    transition: 150ms;
+    background: var(--btndark);
+    border-radius: 40px;
+    width: 68px;
+    height: 44px;
+    cursor: pointer;
+    margin-left: 56px;
+}
+.historic { margin-left: 86px ;}
+.middle {
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content:end ;
+    margin: 100px 35px 0px 35px;
+}
+.footer {
+    display: flex;
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(150deg, var(--footer1) 8.14% , var(--footer2) 84.11%);
+}
+.btnspace {margin: 20px;}
+.operators *{margin-bottom: 20px;}
+.main { width: 294px;}
+.numbers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 20px;
+}
+.numbers * {
+    margin: 10px;
+    background: var(--primary);
+}
+.special {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 26px 34px 10px 25px;
+    width: 260px;
+    height: 70px;
+    background: var(--primary);
+    border-radius: 40px;
+}
+.operators {
+    margin: 25px;
+    width: 70px;
+    height: 430px;
+    background: var(--primary);
+    border-radius: 40px;
+}
+.btns :hover  {
+    transition: 150ms;
+    background-color: var(--secundary) !important;
+    cursor: pointer;
+}
+.equal {background-color: var(--tertiary) !important;}

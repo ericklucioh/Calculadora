@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="top">
+                    <div class="theme ">
+                        <img id="sun" src="sun-dark.svg" alt="sun">
+                        <img id="moon" src="moon-dark.svg" alt="moon">
+                        <img id="sunl" src="sun-light.svg" alt="sun">
+                        <img id="moonl" src="moon-light.svg" alt="moon">
+                        <label
+                            class="theme-switch"
+                            for="checkbox"
+                        >
+                            <input
+                                type="checkbox"
+                                name="checkbox"
+                                class="checkbox theme-switch btns"
+                                id="checkbox"
+                                onclick="setTheme()"
+                            />
+                            <div class="buttonSlider btnTheme">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="historic btns">
+                        <img id="clock" src="clock-dark.svg" alt="clock">
+                        <img id="clockl"src="clock-light.svg" alt="clock">
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="count sizeCount">
+                        <p id="count"></p>
+                    </div>
+                    <div class="result sizeResult">
+                        <div class="signal sizeNumbers">=</div>
+                        <p id="result"class="results"></p>
+                        <p id="result1"class="results"></p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="main">
+                        <div class="special btns buttons sizeNumbers">
+                            <button onclick="clean()">AC</button>
+                            <button onclick="back()" class="btnspace"><-</button>
+                            <button onclick="insert('/100'), view('%')">%</button>
+                        </div>
+                        <div class="numbers btns buttons sizeNumbers">
+                            <button onclick="insert(1), view(1)">1</button>
+                            <button onclick="insert(2), view(2)">2</button>
+                            <button onclick="insert(3), view(3)">3</button>
+                            <button onclick="insert(4), view(4)">4</button>
+                            <button onclick="insert(5), view(5)">5</button>
+                            <button onclick="insert(6), view(6)">6</button>
+                            <button onclick="insert(7), view(7)">7</button>
+                            <button onclick="insert(8), view(8)">8</button>
+                            <button onclick="insert(9), view(9)">9</button>
+                            <button onclick="insert('.'), view('.')">.</button>
+                            <button onclick="insert(0), view(0)">0</button>
+                            <button onclick="insert('00'), view('00')">00</button>
+                        </div>
+                    </div>
+                    <div class="operators 'btnspace' buttons btns sizeNumbers">
+                        <button onclick="insert('/-'), view(''), view('÷')">÷</button>
+                        <button onclick="insert('*'), view('×')">×</button>
+                        <button onclick="insert('-')">-</button>
+                        <button onclick="insert('+'), view('+')">+</button>
+                        <button onclick="calculate()" class="equal btns">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
