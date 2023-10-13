@@ -23,6 +23,7 @@ function calculate() {
     if (result) {
         document.getElementById('count').innerHTML = result1;
         document.getElementById('result1').innerHTML = eval(result);
+        document.getElementById('result').innerHTML =eval(result);
     }
 }
 var dark = true;
