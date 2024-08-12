@@ -1,2 +1,2 @@
 # Calculadora
-ericklucioh.com/calculadora
+https://ericklucioh.com/calculadora
